@@ -11,13 +11,21 @@
 </form>
 %> 
 
+<%#
+<%= form_tag("/users", method: "post") do 
+  <%= label_tag(:user_name, "Name:") 
+  <%= text_field_tag(:user_name) 
+  <%= label_tag(:email, "Email:") 
+  <%= text_field_tag(:email) 
+  <%= label_tag(:password, "Password:") 
+  <%= text_field_tag(:password) 
+  <%= submit_tag("Submit") 
+<% end 
+%>
 
-<%= form_tag("/users", method: "post") do %>
-  <%= label_tag(:user_name, "Name:") %>
-  <%= text_field_tag(:user_name) %>
-  <%= label_tag(:email, "Email:") %>
-  <%= text_field_tag(:email) %>
-  <%= label_tag(:password, "Password:") %>
-  <%= text_field_tag(:password) %>
-  <%= submit_tag("Submit") %>
+<%= form_for @user, url: {action: "new"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :user_name, placeholder:"Name" %>
+  <%= f.text_field :email, placeholder:"Email" %>
+  <%= f.password_field :password, placeholder:"Password" %>
+  <%= f.submit "Create" %>
 <% end %>
