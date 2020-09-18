@@ -1,4 +1,4 @@
-##  Micro-Reddit
+##  Re-Form 
 
 In this project we built some forms, both using nearly-pure HTML and then graduating to using the helper methods that Rails provides.
 
