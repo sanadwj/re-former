@@ -24,8 +24,11 @@
 %>
 
 <%= form_for @user, {class: "nifty_form"} do |f| %>
-  <%= f.text_field :user_name, placeholder:"Name" %>
-  <%= f.text_field :email, placeholder:"Email" %>
+  <%= f.label :user_name, "Name" %>
+  <%= f.text_field :user_name, placeholder:"Name" %> 
+  <%= f.label :email, "E-mail" %>
+  <%= f.text_field :email, placeholder:"Email" %> 
+  <%= f.label :password, "Password" %>
   <%= f.password_field :password, placeholder:"Password" %>
   <%= f.submit "Create" %>
 <% end %>
