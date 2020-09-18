@@ -23,7 +23,7 @@
 <% end 
 %>
 
-<%= form_for @user, url: {action: "new"}, html: {class: "nifty_form"} do |f| %>
+<%= form_for @user, {class: "nifty_form"} do |f| %>
   <%= f.text_field :user_name, placeholder:"Name" %>
   <%= f.text_field :email, placeholder:"Email" %>
   <%= f.password_field :password, placeholder:"Password" %>
